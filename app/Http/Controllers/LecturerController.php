@@ -29,7 +29,7 @@ class LecturerController extends Controller
     {
         $lecturer = User::has('lecturer')->with('lecturer')->find($id);
         if (is_null($lecturer)) {
-            return response()->json('Lecturer not found', 404);
+            return response()->json(['message' => 'Lecturer not found'], 404);
         }
         return response()->json(['user' => $lecturer], 200);
     }

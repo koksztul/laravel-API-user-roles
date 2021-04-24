@@ -91,7 +91,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if (is_null($user)) {
-            return response()->json('User not found', 404);
+            return response()->json(['message' => 'User not found'], 404);
         }
         try {
             $this->validator($request->all())->validate();
@@ -155,7 +155,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if (is_null($user)) {
-            return response()->json('User not found', 404);
+            return response()->json(['message' => 'User not found'], 404);
         }
         return User::destroy($id);
     }

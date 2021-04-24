@@ -17,7 +17,7 @@ class EmployeeController extends Controller
     {
         $lecturers = User::has('employee')->with('employee')->get();
         if (is_null($lecturers)) {
-            return response()->json('Not found', 404);
+            return response()->json(['message' => 'Employees not found'], 404);
         }
         return response()->json($lecturers, 200);
     }
@@ -32,7 +32,7 @@ class EmployeeController extends Controller
     {
         $employee = User::has('employee')->with('employee')->find($id);
         if (is_null($employee)) {
-            return response()->json('Employee not found', 404);
+            return response()->json(['message' => 'Employee not found'], 404);
         }
         return response()->json(['user' => $employee], 200);
     }
