@@ -16,9 +16,6 @@ class LecturerController extends Controller
     public function index()
     {
         $lecturers = User::has('lecturer')->with('lecturer')->get();
-        if (is_null($lecturers)) {
-            return response()->json(['message' => 'Lecturers not found'], 404);
-        }
         return response()->json($lecturers, 200);
     }
 

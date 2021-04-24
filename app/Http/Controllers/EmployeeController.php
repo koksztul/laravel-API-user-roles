@@ -16,9 +16,6 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = User::has('employee')->with('employee')->get();
-        if (is_null($employees)) {
-            return response()->json(['message' => 'Employees not found'], 404);
-        }
         return response()->json($employees, 200);
     }
 
