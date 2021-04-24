@@ -15,11 +15,11 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $lecturers = User::has('employee')->with('employee')->get();
-        if (is_null($lecturers)) {
+        $employees = User::has('employee')->with('employee')->get();
+        if (is_null($employees)) {
             return response()->json(['message' => 'Employees not found'], 404);
         }
-        return response()->json($lecturers, 200);
+        return response()->json($employees, 200);
     }
 
     /**

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('users', 'UserController')->only([
-    'store', 'destroy', 'update']);
+    'index', 'store', 'destroy', 'update']);
 Route::resource('lecturers', 'LecturerController')->only([
     'index', 'show']);
 Route::resource('employees', 'EmployeeController')->only([
