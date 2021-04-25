@@ -62,12 +62,12 @@ class UserController extends Controller
     {
         User::find($user)->first()->fill($request->validated())->save();
         $response = '';
-        if ($request->type == 'lecturer' || $request->type == 'lecturer_and_employee') {
+        if ($request->type === UserType::Lecturer || $request->type === UserType::Both) {
             $lecturer = User::find($user->id)->lecturer;
             $lecturer->update($request->all());
             $response .= 'lecturer';
         }
-        if ($request->type == 'employee' || $request->type == 'lecturer_and_employee') {
+        if ($request->type === UserType::Employee || $request->type === UserType::Both) {
             $employee = User::find($user->id)->employee;
             $employee->update($request->all());
             $response .= ' employee';

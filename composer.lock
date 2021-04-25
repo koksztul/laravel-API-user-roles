@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06ed97fc68625ee6146087f3609586da",
+    "content-hash": "c5698b4b518e4000f7211a2b8d79adc0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -500,6 +500,61 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "fico7489/laravel-revisionable-upgrade",
+            "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fico7489/laravel-revisionable-upgrade.git",
+                "reference": "5a004a8d619f3026f46159d6f5cc322f1472e797"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fico7489/laravel-revisionable-upgrade/zipball/5a004a8d619f3026f46159d6f5cc322f1472e797",
+                "reference": "5a004a8d619f3026f46159d6f5cc322f1472e797",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.5|^6.0|^7.0|^8.0",
+                "venturecraft/revisionable": "1.*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "orchestra/testbench": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fico7489\\Laravel\\RevisionableUpgrade\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Horvat",
+                    "email": "filip.horvat@am2studio.hr",
+                    "homepage": "http://am2studio.hr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Upgrade for the venturecraft revisionable package, add many useful methods.",
+            "homepage": "https://github.com/fico7489/laravel-revisionable-upgrade",
+            "keywords": [
+                "laravel created_by",
+                "laravel deleted_by",
+                "laravel revisionable upgrade",
+                "laravel updated_at by key",
+                "laravel updated_by "
+            ],
+            "support": {
+                "issues": "https://github.com/fico7489/laravel-revisionable-upgrade/issues",
+                "source": "https://github.com/fico7489/laravel-revisionable-upgrade"
+            },
+            "time": "2020-09-28T08:31:16+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -2537,6 +2592,73 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "sofa/revisionable",
+            "version": "v5.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jarektkaczyk/revisionable.git",
+                "reference": "1fc951c8732238ea7cd9acb58c77408a4b67d6d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jarektkaczyk/revisionable/zipball/1fc951c8732238ea7cd9acb58c77408a4b67d6d8",
+                "reference": "1fc951c8732238ea7cd9acb58c77408a4b67d6d8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": ">=6.20.14",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "cartalyst/sentinel": "~2.0",
+                "cartalyst/sentry": "~2.0",
+                "illuminate/auth": "^5.5",
+                "squizlabs/php_codesniffer": "~2.0",
+                "tymon/jwt-auth": "^0.5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sofa\\Revisionable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jarek Tkaczyk",
+                    "email": "jarek@softonsofa.com",
+                    "homepage": "http://softonsofa.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Nice and easy way to handle revisions of your db.",
+            "keywords": [
+                "eloquent",
+                "history",
+                "laravel",
+                "revision",
+                "revisionable"
+            ],
+            "support": {
+                "issues": "https://github.com/jarektkaczyk/revisionable/issues",
+                "source": "https://github.com/jarektkaczyk/revisionable"
+            },
+            "funding": [
+                {
+                    "url": "https://softonsofa.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/jarektkaczyk",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-06T02:41:05+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4838,6 +4960,70 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
+            "name": "venturecraft/revisionable",
+            "version": "1.38.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VentureCraft/revisionable.git",
+                "reference": "7dd938dd3b4abe0ff1bbd7aaf8245f3d66dce205"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VentureCraft/revisionable/zipball/7dd938dd3b4abe0ff1bbd7aaf8245f3d66dce205",
+                "reference": "7dd938dd3b4abe0ff1bbd7aaf8245f3d66dce205",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.0|~5.0|~5.1|^6.0|^7.0|^8.0",
+                "laravel/framework": "~5.4|^6.0|^7.0|^8.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Venturecraft\\Revisionable\\RevisionableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Venturecraft\\Revisionable": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Duell",
+                    "email": "me@chrisduell.com"
+                }
+            ],
+            "description": "Keep a revision history for your models without thinking, created as a package for use with Laravel",
+            "homepage": "http://github.com/venturecraft/revisionable",
+            "keywords": [
+                "Audit",
+                "ardent",
+                "history",
+                "laravel",
+                "model",
+                "revision"
+            ],
+            "support": {
+                "issues": "https://github.com/VentureCraft/revisionable/issues",
+                "source": "https://github.com/VentureCraft/revisionable"
+            },
+            "time": "2021-03-31T00:15:38+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v4.2.0",
             "source": {
@@ -5258,16 +5444,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.12.0",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "d501fd2658d55491a2295ff600ae5978eaad7403"
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/d501fd2658d55491a2295ff600ae5978eaad7403",
-                "reference": "d501fd2658d55491a2295ff600ae5978eaad7403",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c13c0be93cff50f88bbd70827d993026821914dd",
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd",
                 "shasum": ""
             },
             "require": {
@@ -5317,7 +5503,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.12.0"
+                "source": "https://github.com/filp/whoops/tree/2.12.1"
             },
             "funding": [
                 {
@@ -5325,7 +5511,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-30T12:00:00+00:00"
+            "time": "2021-04-25T12:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
