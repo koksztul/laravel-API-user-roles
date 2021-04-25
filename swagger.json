@@ -1,0 +1,21 @@
+
+   ErrorException 
+
+  in_array() expects parameter 2 to be array, null given
+
+  at D:\xampp\htdocs\laravel\user_management_API\vendor\mtrajano\laravel-swagger\src\Generator.php:55
+    51| 
+    52|             foreach ($route->methods() as $method) {
+    53|                 $this->method = $method;
+    54| 
+  > 55|                 if (in_array($this->method, $this->config['ignoredMethods'])) {
+    56|                     continue;
+    57|                 }
+    58| 
+    59|                 $this->generatePath();
+
+  1   D:\xampp\htdocs\laravel\user_management_API\vendor\mtrajano\laravel-swagger\src\Generator.php:55
+      in_array("get")
+
+  2   D:\xampp\htdocs\laravel\user_management_API\vendor\mtrajano\laravel-swagger\src\GenerateSwaggerDoc.php:37
+      Mtrajano\LaravelSwagger\Generator::generate()

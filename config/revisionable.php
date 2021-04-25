@@ -8,6 +8,6 @@ return [
     */
     'model' => Venturecraft\Revisionable\Revision::class,
 
-    'additional_fields' => ['fname', 'lname', 'login', 'email', 'type', 'password'],
+    'additional_fields' => [],
 
 ];

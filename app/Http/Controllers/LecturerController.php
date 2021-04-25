@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class LecturerController extends Controller
 {

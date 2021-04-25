@@ -1,0 +1,130 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/users": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create users who is empoloyee and lecturer",
+                "description": "Login by email, password",
+                "operationId": "authLogin",
+                "requestBody": {
+                    "description": "Pass users who is empoloyee and lecturer",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "fname": {
+                                        "type": "string",
+                                        "example": "Adam"
+                                    },
+                                    "lname": {
+                                        "type": "string",
+                                        "example": "Kowalski"
+                                    },
+                                    "login": {
+                                        "type": "string",
+                                        "example": "aKowlaski"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "akowalski@gmail.com"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "example": "lecturer_and_employee"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "password1234"
+                                    },
+                                    "phone_number": {
+                                        "type": "string",
+                                        "example": "666333222"
+                                    },
+                                    "education": {
+                                        "type": "string",
+                                        "example": "education"
+                                    },
+                                    "mail_voivodship": {
+                                        "type": "string",
+                                        "example": "Wielkopolskie"
+                                    },
+                                    "mail_city": {
+                                        "type": "string",
+                                        "example": "Poznań"
+                                    },
+                                    "mail_postcode": {
+                                        "type": "string",
+                                        "example": "60-300"
+                                    },
+                                    "mail_street": {
+                                        "type": "string",
+                                        "example": "Piątkowska"
+                                    },
+                                    "mail_number": {
+                                        "type": "integer",
+                                        "example": "32"
+                                    },
+                                    "addr_voivodship": {
+                                        "type": "string",
+                                        "example": "Mazowiecki"
+                                    },
+                                    "addr_city": {
+                                        "type": "string",
+                                        "example": "Warszawa"
+                                    },
+                                    "addr_postcode": {
+                                        "type": "string",
+                                        "example": "30-123"
+                                    },
+                                    "addr_street": {
+                                        "type": "string",
+                                        "example": "Warszawska"
+                                    },
+                                    "addr_number": {
+                                        "type": "integer",
+                                        "example": "30"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "User who is empoloyee and lecturer has beed created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "employee lecturer created!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

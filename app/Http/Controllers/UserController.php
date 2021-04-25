@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Validator;
 use App\Employee;
 use App\Lecturer;
 use App\Role;
 use App\User;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
-use Illuminate\Validation\Rules\Exists;
 use App\Enums\UserType;
 
 class UserController extends Controller
@@ -24,6 +22,48 @@ class UserController extends Controller
         $users = User::with(['employee', 'lecturer'])->get();
         return response()->json($users, 200);
     }
+
+   /**
+     * @OA\Post(
+     * path="/api/users",
+     * summary="Create users who is empoloyee and lecturer",
+     * description="Login by email, password",
+     * operationId="authLogin",
+     * tags={"user"},
+     * @OA\RequestBody(
+     *    required=true,
+     *    description="Pass users who is empoloyee and lecturer<br>",
+     *    @OA\JsonContent(
+     *       required={"email","password"},
+     *       @OA\Property(property="fname", type="string", example="Adam"),
+     *       @OA\Property(property="lname", type="string", example="Kowalski"),
+     *       @OA\Property(property="login", type="string", example="aKowlaski"),
+     *       @OA\Property(property="email", type="string", format="email", example="akowalski@gmail.com"),
+     *       @OA\Property(property="type", type="string", example="lecturer_and_employee"),
+     *       @OA\Property(property="password", type="string", example="password1234"),
+     *       @OA\Property(property="phone_number", type="string", example="666333222"),
+     *       @OA\Property(property="education", type="string", example="education"),
+     *       @OA\Property(property="mail_voivodship", type="string", example="Wielkopolskie"),
+     *       @OA\Property(property="mail_city", type="string", example="Poznań"),
+     *       @OA\Property(property="mail_postcode", type="string", example="60-300"),
+     *       @OA\Property(property="mail_street", type="string", example="Piątkowska"),
+     *       @OA\Property(property="mail_number", type="integer", example="32"),
+     *       @OA\Property(property="addr_voivodship", type="string", example="Mazowiecki"),
+     *       @OA\Property(property="addr_city", type="string", example="Warszawa"),
+     *       @OA\Property(property="addr_postcode", type="string", example="30-123"),
+     *       @OA\Property(property="addr_street", type="string", example="Warszawska"),
+     *       @OA\Property(property="addr_number", type="integer", example="30"),
+     *    ),
+     * ),
+     * @OA\Response(
+     *    response=200,
+     *    description="User who is empoloyee and lecturer has beed created",
+     *    @OA\JsonContent(
+     *       @OA\Property(property="message", type="string", example="employee lecturer created!")
+     *        )
+     *     )
+     * )
+     */
 
     /**
      * Store a newly created resource in storage.
@@ -48,7 +88,8 @@ class UserController extends Controller
             $employee->save();
             $response .= ' employee';
         }
-        return $response .= ' created!';
+        $response .= ' created!';
+        return response()->json(['message' => $response], 200);
     }
 
     /**
@@ -72,7 +113,8 @@ class UserController extends Controller
             $employee->update($request->all());
             $response .= ' employee';
         }
-        return $response .= ' updated!';
+        $response .= ' updated!';
+        return response()->json(['message' => $response], 200);
     }
 
     /**

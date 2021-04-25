@@ -2,11 +2,9 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Venturecraft\Revisionable\RevisionableTrait;
-use Fico7489\Laravel\RevisionableUpgrade\Traits\RevisionableUpgradeTrait;
 
 class User extends Authenticatable
 {
@@ -14,7 +12,7 @@ class User extends Authenticatable
     use RevisionableTrait;
 
     protected $revisionCreationsEnabled = true;
-    protected $keepRevisionOf = ['fname', 'lname', 'login', 'email', 'type', 'password'];
+    protected $revisionForceDeleteEnabled = true;
     /**
      * The attributes that are mass assignable.
      *

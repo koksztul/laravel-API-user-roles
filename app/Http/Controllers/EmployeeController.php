@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use GuzzleHttp\Psr7\Request;
 
 class EmployeeController extends Controller
 {
