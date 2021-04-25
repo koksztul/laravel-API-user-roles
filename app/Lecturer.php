@@ -11,7 +11,7 @@ class Lecturer extends Model
         'education',
         'user_id'
     ];
-    public function role()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

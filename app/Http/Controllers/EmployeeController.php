@@ -15,7 +15,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = User::has('employee')->with('employee')->get();
+        $employees = User::with('employee')->get();
         return response()->json($employees, 200);
     }
 
@@ -27,10 +27,10 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        $employee = User::has('employee')->with('employee')->find($id);
+        $employee = User::with('employee')->find($id);
         if (is_null($employee)) {
             return response()->json(['message' => 'Employee not found'], 404);
         }
-        return response()->json(['user' => $employee], 200);
+        return response()->json($employee, 200);
     }
 }

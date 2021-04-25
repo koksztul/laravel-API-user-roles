@@ -20,7 +20,7 @@ class Employee extends Model
         'addr_number',
     ];
 
-    public function role()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

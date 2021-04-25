@@ -15,7 +15,7 @@ class LecturerController extends Controller
      */
     public function index()
     {
-        $lecturers = User::has('lecturer')->with('lecturer')->get();
+        $lecturers = User::with('lecturer')->get();
         return response()->json($lecturers, 200);
     }
 
@@ -27,10 +27,10 @@ class LecturerController extends Controller
      */
     public function show($id)
     {
-        $lecturer = User::has('lecturer')->with('lecturer')->find($id);
+        $lecturer = User::with('lecturer')->find($id);
         if (is_null($lecturer)) {
             return response()->json(['message' => 'Lecturer not found'], 404);
         }
-        return response()->json(['user' => $lecturer], 200);
+        return response()->json($lecturer, 200);
     }
 }
