@@ -101,7 +101,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        User::find($user)->first()->fill($request->validated())->save();
+        User::first()->fill($request->validated())->save();
         $response = '';
         if ($request->type === UserType::Lecturer || $request->type === UserType::Both) {
             $lecturer = User::find($user->id)->lecturer;
